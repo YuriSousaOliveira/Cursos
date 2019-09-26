@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Curso JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<input id="nome">
+		<input type="text" name="nome" />
+		<button class="botao">Adicionar</button>
+	</div>
+	<div class="box">
+		
+	</div>
+	<script>
+		// Trabalhando com a DOM
+		var inputElement = document.getElementById('nome')
+		var inputElement = document.getElementsByTagName('input')
+		var inputElement = document.getElementsByClassName('nome')
+		var inputElement = document.querySelector('body div#app input')
+		var inputElement = document.querySelectorAll('input')
+		console.log(inputElement)
+		var inputElement = document.querySelector('input[name=nome]')
+		var btnElement = document.querySelector("button.botao")
+
+		btnElement.onclick = function() {
+			var text = inputElement.value
+			alert(text)
+		}
+		
+		//Lidando com elementos
+		var linkElement = document.createElement('a')
+		linkElement.setAttribute('href','https://www.google.com')
+		linkElement.setAttribute('title','Site do Google')
+		var textElement = document.createTextNode('Acessar site')
+		linkElement.appendChild(textElement)
+		var containerElement = document.querySelector('#app')
+		containerElement.appendChild(linkElement)
+
+		var inputElemento = document.querySelector('#nome')
+		containerElement.removeChild(inputElement)
+
+		//Alterando Estilos
+		var boxElement = document.querySelector('.box')
+		boxElement.style.width = 100
+		boxElement.style.height = 100
+		boxElement.style.backgroundColor = '#fff'
+
+	</script>
+</body>
+</html>
